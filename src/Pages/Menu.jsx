@@ -8,7 +8,7 @@ export default function Menu() {
   return (
     <>
       <header>
-        <img src="../title-math.svg" alt="we hate simple math"/>
+        <img src="../title-math.svg" class="fill-transparent" alt="we hate simple math"/>
       </header>
       <section>
         <div>
@@ -26,7 +26,7 @@ export default function Menu() {
       <section>
         <Button
           title={ 'start game' }
-          image={ '../start-button.svg' }
+          // image={ '../start-button.svg' }
           startGame={ startGame }
         />
       </section>
