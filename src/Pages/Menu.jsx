@@ -1,15 +1,21 @@
+import { useNavigate } from "react-router-dom";
+
 import Button from "../Components/Button";
+import titleLogo from "../img/title-math.svg";
+import startButton from "../img/start-button.svg"
 
 export default function Menu() {
-  function startGame() {
-    console.log('clica');
-  }
+  const navigate = useNavigate();
+
+  const startGame = () => navigate("/game");
+  const moreCredits = () => navigate("/credits");
+  const moreAbout = () => navigate("/more-about-math-anxiety");
 
   return (
     <>
-      <header>
-        <img src="../title-math.svg" class="fill-transparent" alt="we hate simple math"/>
-      </header>
+      <section>
+        <img src={ titleLogo } class="fill-transparent" alt="we hate simple math"/>
+      </section>
       <section>
         <div>
           <p>quick question: what's 7 times 9?</p>
@@ -21,15 +27,31 @@ export default function Menu() {
         </div>
         <div>
           <p>so, I made this site to basically torture myself, and hopefully not be as scared while resolving some mental math.</p>
+          <p>wanna join me?</p>
         </div>
       </section>
       <section>
-        <Button
-          title={ 'start game' }
-          // image={ '../start-button.svg' }
-          startGame={ startGame }
-        />
+        <div>
+          <Button
+            title={ 'start game' }
+            image={ startButton }
+            functionGame={ startGame }
+          />
+        </div>
+        <div>
+          <Button
+            title={ 'more about math anxiety' }
+            functionGame={ moreAbout }
+          />
+          <Button
+            title={ 'credits' }
+            functionGame={ moreCredits }
+          />
+        </div>
       </section>
+      <footer>
+        <p>by <a href="https://github.com/itscacauinpt/" target="_blank" rel="noreferrer">@itscacauinpt</a></p>
+      </footer>
     </>
   )
 }
