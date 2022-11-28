@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../Components/Button";
 import SimpleButton from "../Components/SimpleButton";
 import Symbol from "../Components/Symbol";
+import Countdown from "../Components/ContdownTimer";
 
 import backButton from "../img/back-button.svg"
 
@@ -22,6 +23,7 @@ export default function Game() {
   const { functions: { setResult, setAnswers } } = useContext(GameContext);
 
   const backMenu = () => navigate("/menu");
+  const stopGame = () => navigate("/game-score");
 
   const handleChanger = ({value}) => {
     if (value <= -1) value = 0;
@@ -60,7 +62,14 @@ export default function Game() {
             image={backButton}
             functionGame={backMenu}
           />
-
+          <Countdown
+            remainingTime={60000}
+          />
+          <SimpleButton
+            title={"stop"}
+            functionGame={stopGame}
+            classStyle={"border-2 rounded-full md:bg-gray-d9 hover:border-slate-400"}
+          />
           <div class="border-2">
             <div>
               <p>{expression.prod}</p>
