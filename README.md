@@ -11,11 +11,22 @@
 <h4>To do</h4>
 <ul>
   <li>[X] página inicial</li>
+  ---------//---------
   <li>[ ] página do game</li>
-  <li>[ ] função "continhas aleatórias"</li>
+  <li>[X] "continhas aleatórias"</li>
   <li>[ ] temporizador</li>
+  <li>[ ] track de score</li>
+  ---------//---------
   <li>[ ] página de score</li>
-  <h5>plus...</h5>
+  <li>[ ] score total</li>
+  <li>[ ] repetir jogo</li>
+  <li>[ ] compartilhar score</li>
+  <li>[ ] frase (des)motivacional</li>
+  ---------//---------
+  <li>[ ] página de info</li>
+  <li>[ ] página de créditos</li>
+  ---------//---------
+  <p>plus...</p>
   <li>[ ] jogo: tempo limite</li>
   <li>[ ] jogo: infinito</li>
 </ul>
@@ -24,7 +35,7 @@
 ## ✨ Como rodar localmente
 <ul>
   <li>Execute os seguintes comandos no terminal:</li>
-  <li><code>npm run start ;</code></li>
+  <li><code>npm run start</code> ;</li>
   <li>Abra seu browser <code>http://localhost:3000/</code> .</li>
 </ul>
   
