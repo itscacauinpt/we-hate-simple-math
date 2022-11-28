@@ -5,7 +5,8 @@ export default function Button({ title, functionGame, image }) {
       onClick={ () => functionGame() }
     >
       {
-        image ? <img src={image} class="fill-transparent" alt={title} /> : <p>{title}</p>
+        image ? <img src={image} class="fill-transparent w-[65%] ml-5" alt={title} />
+          : <p class="m-2 underline underline-offset-2">{title}</p>
       }
     </button>
   )
