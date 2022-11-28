@@ -12,11 +12,58 @@ const funcMinus = (symbol) => {
   const prod = getProducts100();
   let secondProd = getProducts100();
 
-  if (secondProd > prod) {
+  while (secondProd > prod) {
     secondProd = getProducts100();
   }
 
-  return { symbol, prod, secondProd }
+  const result = prod-secondProd;
+
+  return { symbol, prod, secondProd, result };
+}
+
+const funcPlus = (symbol) => {
+  const prod = getProducts100();
+  const secondProd = getProducts100();
+
+  return {
+    symbol,
+    prod,
+    secondProd,
+    result: prod+secondProd,
+  }
+}
+
+const funcTimes = (symbol) => {
+  const prod = getProducts100();
+  const secondProd = getProducts10();
+
+  return {
+    symbol,
+    prod,
+    secondProd,
+    result: prod*secondProd,
+  }
+}
+
+const funcDivide = (symbol) => {
+  let prod = getProducts100();
+  let secondProd = getProducts10();
+
+  while (secondProd === 0 || prod === 0 || secondProd === 1 || prod === 1) {
+    secondProd = getProducts10();
+    prod = getProducts100();
+  }
+
+  while (prod%secondProd !== 0) {
+    secondProd = getProducts10();
+  }
+
+  return {
+    symbol,
+    prod,
+    secondProd,
+    result: prod/secondProd,
+  }
 }
 
 export const startGame = () => {
@@ -24,27 +71,9 @@ export const startGame = () => {
 
   if (symbol === 'minus') return funcMinus(symbol);
 
-  if (symbol === 'plus') {
-    return {
-      symbol,
-      prod: getProducts100(),
-      secondProd: getProducts100()
-    }
-  }
+  if (symbol === 'plus') return funcPlus(symbol);
 
-  if (symbol === 'times') {
-    return {
-      symbol,
-      prod: getProducts100(),
-      secondProd: getProducts10(),
-    }
-  }
+  if (symbol === 'times') return funcTimes(symbol);
 
-  if (symbol === 'divide') {
-    return {
-      symbol,
-      prod: getProducts100(),
-      secondProd: getProducts10(),
-    }
-  }
+  if (symbol === 'divide') return funcDivide(symbol);
 }
