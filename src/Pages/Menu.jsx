@@ -29,10 +29,6 @@ export default function Menu() {
           <p>did you freaked out? well, that might be math anxiety.</p>
         </div>
         <div class="mb-2">
-          <p>simple answer? math hurts people's brain.</p>
-          <p>math hurts mine, and I'm talking about simple math here.</p>
-        </div>
-        <div class="mb-2">
           <p>so, I made this site to basically torture myself, and hopefully not be as scared while resolving some mental math.</p>
           <p>wanna join me?</p>
         </div>

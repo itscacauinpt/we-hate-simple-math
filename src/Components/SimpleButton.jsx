@@ -1,7 +1,7 @@
 export default function SimpleButton({ title, functionGame, classStyle }) {
   return(
     <button
-      class={ classStyle }
+      className={ classStyle }
       onClick={ () => functionGame() }
     >
       {title}

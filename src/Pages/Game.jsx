@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../Components/Button";
 import SimpleButton from "../Components/SimpleButton";
 import Symbol from "../Components/Symbol";
-import Countdown from "../Components/ContdownTimer";
+// import Countdown from "../Components/ContdownTimer";
 
 import backButton from "../img/back-button.svg"
 
@@ -62,15 +62,15 @@ export default function Game() {
             image={backButton}
             functionGame={backMenu}
           />
-          <Countdown
+          {/* <Countdown
             remainingTime={60000}
-          />
+          /> */}
           <SimpleButton
             title={"stop"}
             functionGame={stopGame}
             classStyle={"border-2 rounded-full md:bg-gray-d9 hover:border-slate-400"}
           />
-          <div class="border-2">
+          <div className="border-2">
             <div>
               <p>{expression.prod}</p>
               <p>{expression.secondProd}</p>
